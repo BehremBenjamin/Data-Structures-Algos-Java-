@@ -5,6 +5,11 @@ Time is proportional to the square of an input.
 
 public class QuadraticTimeComplexity {
     static void derivingQuadraticTime(int numberOfElements) {
+     if (numberOfElements < 0) numberOfElements*=-1;
+        if (numberOfElements == 0) {
+            System.out.println("elements must be greater than 0");
+            return;
+        }
         int instructions = 0;
         for (int i = 0; i < numberOfElements; i++) {
             for (int j = 0; j < numberOfElements; j++) {
