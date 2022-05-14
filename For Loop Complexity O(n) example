@@ -5,6 +5,11 @@ Execution time is directly proportional to the input size.
 
 public class TimeComplexityExample {
     static void derivingLinearRuntime(int numberOfElements) {
+     if (numberOfElements < 0) numberOfElements*=-1;
+        if (numberOfElements == 0) {
+            System.out.println("elements must be greater than 0");
+            return;
+        }
         int instructions = 0;
         for (int i = 0; i<numberOfElements; i++) instructions+=1;
         System.out.println("Number of elements: " + numberOfElements +
