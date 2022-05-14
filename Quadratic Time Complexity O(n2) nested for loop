@@ -1,0 +1,21 @@
+/*
+Nested for Loops are example of O(n2) - quadratic time complexity
+Time is proportional to the square of an input.
+ */
+
+public class QuadraticTimeComplexity {
+    static void derivingQuadraticTime(int numberOfElements) {
+        int instructions = 0;
+        for (int i = 0; i < numberOfElements; i++) {
+            for (int j = 0; j < numberOfElements; j++) {
+                instructions+=1;
+            }
+        }
+        System.out.println("Number of elements: " + numberOfElements +
+                ". Number of instructions " + instructions);
+    }
+
+    public static void main(String[] args) {
+        derivingQuadraticTime(100); // output: Number of elements: 100. Number of instructions 10000
+    }
+}
