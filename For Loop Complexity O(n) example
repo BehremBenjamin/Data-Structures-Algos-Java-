@@ -12,6 +12,6 @@ public class TimeComplexityExample {
     }
 
     public static void main(String[] args) {
-        derivingLinearRuntime(1000);  // output  Number of elements: 1000. Number of instructions 1000
+        derivingLinearRuntime(1000);  // output:  Number of elements: 1000. Number of instructions 1000
     }
 }
