@@ -1,0 +1,30 @@
+// O(n+(n-1)+(n-2)+...) == O(n(n+1)/2) == O(n2)
+
+public class QuadraticTimeComplexity {
+    static void derivingQuadraticTime(int numberOfElements) {
+        int instructions = 0;
+        for (int i = 0; i <= numberOfElements; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+                instructions+=1;
+            }
+            System.out.println();
+        }
+        System.out.println("Number of elements: " + numberOfElements +
+                ". Number of instructions " + instructions);
+    }
+
+    public static void main(String[] args) {
+        derivingQuadraticTime(5); // output: Number of elements: 5. Number of instructions 15
+    }
+}
+
+/* printing pattern: 
+
+*
+**
+***
+****
+*****
+
+*/
