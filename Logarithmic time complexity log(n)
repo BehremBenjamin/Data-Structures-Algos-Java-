@@ -1,0 +1,30 @@
+/*
+In logarithmic time complexity, each time the input
+is divided into half, 1/2 is traversed, other is pruned
+Binary Search Tree is an example of log(n) time complexity
+ */
+
+
+public class LogarithmicTimeComplexity {
+    static void derivingLogarithmicTime(int numberOfElements) {
+        if (numberOfElements < 0) numberOfElements*=-1;
+        if (numberOfElements == 0) {
+            System.out.println("elements must be greater than 0");
+            return;
+        }
+
+        System.out.print("Number of elements: " + numberOfElements + ". ");
+
+        int instructions = 0;
+        while (numberOfElements > 1) {
+            numberOfElements/=2;
+            instructions+=1;
+        }
+
+        System.out.println("Number of instructions " + instructions);
+    }
+
+    public static void main(String[] args) {
+        derivingLogarithmicTime(32768);  // output: Number of elements: 32768. Number of instructions 15
+    }
+}
