@@ -1,0 +1,29 @@
+// The number of nested loops is the exponent number. 
+
+public class ThirdPower {
+    static void derivingThirdPowerOfaNumber(int numberOfElements) {
+        int i, j, k, m = 0;
+
+        for (i = 0; i<numberOfElements; i++) {
+            for (j = 0; j<numberOfElements; j++) {
+                for (k = 0; k<numberOfElements; k++) {
+                    m+=1;
+                }
+            }
+        }
+        System.out.println("Number of elements in [3] nested loops: " + numberOfElements + " " +
+                " Numbers of instructions: " + m);
+        System.out.println("Number of instructions = pow(numberOfElements, number of nested loops)");
+    }
+
+    public static void main(String[] args) {
+
+        derivingThirdPowerOfaNumber(10);
+       
+       /* output:
+        Number of elements in [3] nested loops: 10  Numbers of instructions: 1000
+        Number of instructions = pow(numberOfElements, number of nested loops
+        */
+        
+    }
+}
