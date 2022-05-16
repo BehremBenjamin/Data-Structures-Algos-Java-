@@ -1,0 +1,36 @@
+/*
+At each step, we will reduce our search space by half!
+We compare the middle value with the value we are searching for.
+If the middle is smaller than searched element, we search left(smaller) side,
+else we search the right (bigger)
+*/
+
+public class BinarySearchInSortedArray {
+    public static int binarySearch(int[] array, int size, int numberToFind) {
+
+        int middle;
+        int low = 0;
+        int high = size-1;
+
+        while (low <= high) {
+            middle = (low + high) / 2;
+            if (array[middle] == numberToFind) {
+                return middle;
+            } else {
+                if (array[middle] < numberToFind)  {
+                    low = middle + 1;
+                } else {
+                    high = middle - 1;
+                }
+            }
+        }
+        System.out.println("number not found!");
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        int[] myArray = {0,1,2,3,4,5,6,7,8,9};
+
+        System.out.println(binarySearch(myArray,myArray.length, 3));
+    }
+}
